@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: coroutines
+  server:
+    port: 8080
+    netty:
+      worker-threads: 16
+
+  http:
+    services:
+      upstream-client:
+        urls:
+          - "http://localhost:8081"
+        pool:
+          enabled: true
+          max-connections: 1000
